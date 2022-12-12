@@ -12,9 +12,10 @@ variable "search" {
     name          = string
     public        = bool
     replica_count = number
+    partition_count=number
   })
 }
 
 variable "tags" {
-  type = map
+  type = map(any)
 }
