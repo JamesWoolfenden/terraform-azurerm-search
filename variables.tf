@@ -8,11 +8,12 @@ variable "location" {
 
 variable "search" {
   type = object({
-    sku           = string
-    name          = string
-    public        = bool
-    replica_count = number
-    partition_count=number
+    sku             = string
+    name            = string
+    public          = bool
+    replica_count   = number
+    partition_count = number
+    allowed_ips     = list(string)
   })
 }
 
