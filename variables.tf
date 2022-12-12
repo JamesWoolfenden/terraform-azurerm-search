@@ -8,9 +8,13 @@ variable "location" {
 
 variable "search" {
   type = object({
-    sku    = string
-    name   = string
-    public = bool
-
+    sku           = string
+    name          = string
+    public        = bool
+    replica_count = number
   })
+}
+
+variable "tags" {
+  type = map
 }

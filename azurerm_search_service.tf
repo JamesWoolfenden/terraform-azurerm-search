@@ -4,4 +4,9 @@ resource "azurerm_search_service" "pike" {
   location                      = var.location
   sku                           = var.search.sku
   public_network_access_enabled = var.search.public
+  replica_count                 = var.search.replica_count
+  identity {
+    type = "SystemAssigned"
+  }
+  tags = var.tags
 }
